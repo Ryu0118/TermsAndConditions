@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+/* 初期スタイル調整 */
+*{
+  box-sizing: border-box;
+}
+
+/* body全体の初期スタイル調整 */
+body{
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  color: #111;
+  background-color: #eff9fd;
+}
+
+/* 各要素の初期スタイル調整 */
+h1,h2,h3{
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+a{
+  color: #555;
+  text-decoration: none;
+}
+a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ul{
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+figure{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+address{
+  font-style: normal;
+}
+/* ---------- 初期スタイル調整 ここまで ---------- */
+
+
+/* --------------------------------------------------
+  共通部分のスタイル指定
+-------------------------------------------------- */
+
+/* ヘッダー */
+
+.app-btn{
+  position: relative;
+
+}
+
+.header{
+  position: relative;
+  padding: 15px 0 0;
+  background-color: #fff;
+}
+
+/* ロゴ */
+.logo{
+  width: 140px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+/* ナビゲーション用チェックボックス */
+/* --------------------
+  チェックボックスでメニュー項目の表示／非表示を切り替える。
+  ブラウザ上にはチェックボックスを表示したくないため、
+  「display: none;」で非表示にしている。
+  -------------------- */
+.nav-toggle{
+  display: none;
+}
+
+/* ハンバーガーボタン */
+.btn-burger{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 2;
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: url(../img/burger.svg) center center / 35px 20px no-repeat;
+  cursor: pointer;
+}
+
+/* メニューが開いたときの、ハンバーガーボタンの画像を指定 */
+.nav-toggle:checked ~ .btn-burger{
+  background: url(../img/close.svg) center center / 26px 26px no-repeat;
+}
+
+/* ナビゲーション */
+.nav {
+  padding-top: 10px;
+  background: url(../img/nav_bg.png) center center / cover no-repeat;
+}
+.nav-list {
+  display: none;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.nav-list li {
+  margin: 0;
+  padding: 10px;
+}
+.nav-list a {
+  display: block;
+  color: #fff;
+}
+
+/* メニューが開いたとき、<ul>を表示する */
+.nav-toggle:checked ~ .nav .nav-list {
+  display: block;
+}
+
+/* ----------ナビゲーションのスタイル指定 ここまで---------- */
+
+/* セクション */
+
+/* 見出し（h2） */
+.heading-section{
+  color: #00ccff;
+  text-align: center;
+}
+/* トップページ横並び要素の見出し（h3） */
+.heading-topic{
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #00ccff;
+}
+
+ul.col{
+  padding: 20px;
+  
+}
+
+/* フッター全体 */
+.footer{
+  padding: 40px 0 30px;
+  color: #000000;
+  text-align: center;
+  background:url("../img/footer_bg.png")center center / cover no-repeat;
+}
+
+/* フッターロゴ */
+.footer-logo{
+  margin-bottom: 10px;
+}
+
+/* 連絡先 */
+.footer-address{
+  margin: 10px 0;
+}
+
+/* SNSのリンクボタン */
+.footer-sns{
+  margin: 20px 0;
+  text-align: center;
+}
+.footer-sns a {
+  display: inline-block;
+  margin: 0 5px;
+}
+.footer-sns img {
+  display: flex;
+  width: 30px;
+  vertical-align: middle;
+}
+/* コピーライト */
+.copyright{
+  margin: 0;
+}
+.copyright small{
+  font-size: 11px;
+}
+
+/* --------------------------------------------------
+  トップページ
+-------------------------------------------------- */
+
+/* メインイメージ */
+.top{
+  height: 200px;
+  margin-bottom: 50px;
+  background: url("../img/top.jpeg")center bottom / cover no-repeat;
+}
+
+/* 横並び要素（幅768px未満では縦並びで配置される） */
+.col{
+  max-width: 300px;
+  margin: 0 auto 50px;
+}
+.col-image{
+  margin-bottom: 10px;
+}
+.col p {
+  margin-bottom: 0;
+}
+/* --------------------------------------------------
+  営業案内
+-------------------------------------------------- */
+.kiyaku-section{
+  margin: 100px;
+}
+
+
+/* --------------------------------------------------
+  お問い合わせフォーム
+-------------------------------------------------- */
+
+/* フォームの3つのブロックに対する指定 */
+.form-group{
+  margin-bottom: 20px;
+}
+
+/* 項目名に対する指定 */
+.form-label{
+  display: block;
+  margin-bottom: 10px;
+  color: #032559;
+}
+
+/* 送信ボタンを囲む<div>に対する指定 */
+.form-btn{
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* 入力欄に対する指定 */
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* 入力欄が:focus（入力状態）のとき */
+input[type="text"],
+input[type="email"],
+textarea:focus{
+  border-color: #032559;
+  outline: none;
+}
+
+/* 送信ボタン */
+button[type="submit"]{
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* 送信ボタンが:hoverのとき */
+
+
+div.form-btn {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+
+/* --------------------------------------------------
+  幅768px未満のスタイル指定 ここまで
+-------------------------------------------------- */
+
+
+
+/* --------------------------------------------------
+  幅768px以上のスタイル指定 ここから
+-------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* ヘッダー */
+.header{
+  padding: 40px 0 0;
+}
+  
+  /* ロゴ */
+.logo{
+  width: auto;
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: center;
+}
+
+  /* ハンバーガーボタン */
+.btn-burger{
+  display: none;
+}
+
+  /* ナビゲーション */
+  .nav{
+    padding: 40px 0;
+  }
+  .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .nav-list li{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0 20px;
+    line-height: 1;
+    border-right: 1px solid #fff;
+  }
+  
+  .nav-list li:first-child{
+    border-left: 1px solid #fff;
+  }
+    /* 幅768px未満でメニューを開いた状態から、ウィンドウ幅を768px以上に広げたとき、メニューにflexboxを適用して<li>を横並び表示に切り替える */
+  .nav-toggle:checked ~ .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  /* セクション */
+.section{
+  margin: 75px;
+  
+}
+
+  /* 見出し（h2） */
+.heading-section{
+  margin-bottom: 50px;
+}
+
+  /* フッター */
+.footer{
+  padding: 50px 0 20px;
+}
+.footer-sns{
+  margin: 30px 0;
+}
+
+
+  /* --------------------------------------------------
+  トップページ
+  -------------------------------------------------- */
+
+  /* メインイメージ */
+.top{
+  height: 378px;
+  margin-bottom: 70px;
+}
+.row{
+  display: -webkit-box;-webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+  /* 横並び要素 */
+.col{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 32%;
+  flex: 0 1 32%;
+  margin: 0%;
+}
+
+  /* 横並び */
+
+  /* --------------------------------------------------
+  営業案内
+  -------------------------------------------------- */
+
+  
+
+
+  /* --------------------------------------------------
+  お問い合わせフォーム
+  -------------------------------------------------- */
+
+  /* フォームの3つのブロックに対する指定 */
+.form-group{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  margin-bottom: 10px;
+}
+
+  /* 項目名に対する指定 */
+.form-label{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 12em;
+  flex: 0 0 12em;
+  max-width: 12em;
+  margin: 0;
+  padding-top: 5px;
+}
+
+  /* 入力欄を囲む<div>に対する指定 */
+.form-col{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%ß;
+}
+}
+
+  /* --------------------------------------------------
+  幅768px以上のスタイル指定 ここまで
+  -------------------------------------------------- */
+.footer-p{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.footer-p p{
+  padding: 0 20px;
+  border-right: 0.5px solid #fff;
+}
+
+a.kiyaku-a{
+  color: #002fff;
+}
+
+.form-g{
+  width: 100%;
+  height: 1200px;
+}
