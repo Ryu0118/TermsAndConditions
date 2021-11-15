@@ -448,3 +448,27 @@ a.kiyaku-a{
   width: 100%;
   height: 1200px;
 }
+.p-p{
+  margin: 0 20px;
+}
+
+.p-p li{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.p-p a{
+  color: #002fff;
+}
+
+.p-p a:hover{
+  color: #001fa7;
+}
+
+.kiyaku-section a{
+  color: #002fff;
+}
+
+.kiyaku-section a:hover{
+  color: #001fa7;
+}
